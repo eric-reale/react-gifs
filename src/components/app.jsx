@@ -29,14 +29,18 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <div className="left-scene">
-          <SearchBar searchFunction={this.search} />
-          <Gif id={this.state.selectedGifID} />
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <SearchBar searchFunction={this.search} />
+          </div>
         </div>
-        <div className="right-scene">
-          <GifList gifs={this.state.gifs} />
+        <div className="row">
+            <div className="col">
+              <Gif id={this.state.selectedGifID} />
+            </div>
         </div>
+              <GifList gifs={this.state.gifs} />
       </div>
     );
   }
